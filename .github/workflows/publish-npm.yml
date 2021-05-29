@@ -29,4 +29,5 @@ jobs:
           npx lerna run build
           npx lerna publish from-package --yes
         env:
-          registry-url: https://registry.npmjs.org 
+          registry-url: https://registry.npmjs.org
+          NODE_AUTH_TOKEN: ${{secrets.NpmToken}}
