@@ -1,0 +1,23 @@
+{
+  "name": "ru-toolkit-timeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linyisonger/Ru.Toolkit.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "林一怂儿",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.3.2"
+  },
+  "gitHead": "ad3420a661b48ad972554bd298c51ce06a6e1dff"
+}

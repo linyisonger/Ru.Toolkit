@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist", // 编译后生成的文件目录  
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": []
+}
