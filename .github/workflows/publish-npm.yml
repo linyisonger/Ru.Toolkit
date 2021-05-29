@@ -22,20 +22,11 @@ jobs:
         with:
           node-version: 10
           registry-url: https://registry.npmjs.org 
-      - name: 安装主包依赖
       - run: |
-          npm i
-      - name: 安装子包依赖
-      - run: | 
+          npm i 
           npx lerna run init
-      - name: 运行子包测试
-      - run: |
           npx lerna run test
-      - name: 运行子包构建
-      - run: |
           npx lerna run build
-      - name: 发布子包
-      - run: |
-          npx lerna publish from-package --yes 
+          npx lerna publish from-package --yes
         env:
           registry-url: https://registry.npmjs.org 
