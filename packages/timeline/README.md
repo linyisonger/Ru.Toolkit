@@ -6,7 +6,7 @@
 
 预览图
 
-![image-20210614162534238](../../examples/timeline/preview.png)
+![image-20210614162534238](https://github.com/linyisonger/Ru.Toolkit/blob/main/examples/timeline/preview.png)
 
 代码
 
