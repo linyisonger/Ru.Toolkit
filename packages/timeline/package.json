@@ -1,7 +1,8 @@
 {
   "name": "ru-toolkit-timeline",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
+  "markdown": "github",
   "main": "index.js",
   "scripts": {
     "init": "npm i",
@@ -10,10 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/linyisonger/Ru.Toolkit.git"
+    "url": "git+https://github.com/linyisonger/Ru.Toolkit/tree/main/packages/timeline/README.md"
   },
   "keywords": [
-    "typescript"
+    "typescript",
+    "timeline",
+    "css"
   ],
   "author": "林一怂儿",
   "license": "MIT",
