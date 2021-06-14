@@ -6,7 +6,7 @@
   "scripts": {
     "init": "npm i",
     "test": "echo \"Error: no test specified\"",
-    "build": "npx tsc"
+    "build": "npx webpack"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,12 @@
   "dependencies": {
     "typescript": "^4.3.2"
   },
-  "gitHead": "ad3420a661b48ad972554bd298c51ce06a6e1dff"
+  "gitHead": "ad3420a661b48ad972554bd298c51ce06a6e1dff",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "mini-css-extract-plugin": "^1.6.0",
+    "ts-loader": "^9.2.3",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
 }

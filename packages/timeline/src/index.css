@@ -1,0 +1,77 @@
+.ru-timeline,
+.ru-timeline-item {
+  display: block;
+  position: relative;
+}
+.ru-timeline {
+  --pl: 36px;
+  --lw: calc(calc(var(--pl) / 3) * 2);
+  --il: calc(calc(var(--pl) - var(--lw)) / 2);
+  --bw: 1px;
+  --ll: calc(calc(calc(var(--pl) - var(--bw)) / 2));
+  padding-top: var(--il);
+}
+.ru-timeline-item {
+  padding-left: var(--pl);
+}
+
+.ru-timeline-item .ru-icon {
+  background-color: #fff;
+  width: var(--lw);
+  height: var(--lw);
+  position: absolute;
+  left: var(--il);
+  text-align: center;
+  line-height: var(--lw);
+}
+
+.ru-timeline-item .ru-icon.ru-default::after {
+  --dr: calc(calc(var(--lw) / 3) * 2);
+  content: "";
+  position: absolute;
+  width: var(--dr);
+  height: var(--dr);
+  background-color: #86b3ffd5;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ru-timeline-item .ru-icon.ru-default::before {
+  --dr: calc(calc(var(--lw) / 6) * 2);
+  content: "";
+  position: absolute;
+  width: var(--dr);
+  height: var(--dr);
+  background-color: #fff;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ru-timeline-item:nth-last-child(n + 2) > .ru-line {
+  position: absolute;
+  width: 1px;
+  background-color: rgb(189, 189, 189);
+  height: 100%;
+  left: var(--ll);
+  content: "";
+  top: 0;
+  z-index: -1;
+}
+
+.ru-timeline-item .ru-label {
+  color: rgb(124, 124, 124);
+  font-size: 12px;
+  line-height: var(--lw);
+}
+
+.ru-timeline-item .ru-content {
+  color: #333;
+  padding: calc(var(--ll) / 2) 0 calc(var(--ll));
+  font-size: 14px;
+}
