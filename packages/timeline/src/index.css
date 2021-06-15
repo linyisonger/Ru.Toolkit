@@ -1,9 +1,12 @@
 .ru-timeline,
-.ru-timeline-item {
+.ru-timeline-item,
+ru-timeline,
+ru-timeline-item {
   display: block;
   position: relative;
 }
-.ru-timeline {
+.ru-timeline,
+ru-timeline {
   --pl: 36px;
   --lw: calc(calc(var(--pl) / 3) * 2);
   --il: calc(calc(var(--pl) - var(--lw)) / 2);
@@ -11,21 +14,29 @@
   --ll: calc(calc(calc(var(--pl) - var(--bw)) / 2));
   padding-top: var(--il);
 }
-.ru-timeline-item {
+.ru-timeline-item,
+ru-timeline-item {
   padding-left: var(--pl);
 }
 
-.ru-timeline-item .ru-icon {
-  background-color: #fff;
+.ru-timeline-item .ru-icon,
+ru-timeline-item .ru-icon {
+  background-color: rgb(255, 255, 255);
   width: var(--lw);
   height: var(--lw);
   position: absolute;
   left: var(--il);
   text-align: center;
   line-height: var(--lw);
+  top: 0;
+  border-width: 0;
 }
-
-.ru-timeline-item .ru-icon.ru-default::after {
+ru-timeline-item img[src=""],
+ru-timeline-item img:not([src]) {
+  opacity: 0;
+}
+.ru-timeline-item .ru-icon.ru-default::after,
+ru-timeline-item .ru-icon.ru-default::after {
   --dr: calc(calc(var(--lw) / 3) * 2);
   content: "";
   position: absolute;
@@ -39,7 +50,8 @@
   transform: translate(-50%, -50%);
 }
 
-.ru-timeline-item .ru-icon.ru-default::before {
+.ru-timeline-item .ru-icon.ru-default::before,
+ru-timeline-item .ru-icon.ru-default::before {
   --dr: calc(calc(var(--lw) / 6) * 2);
   content: "";
   position: absolute;
@@ -53,7 +65,8 @@
   transform: translate(-50%, -50%);
 }
 
-.ru-timeline-item:nth-last-child(n + 2) > .ru-line {
+.ru-timeline-item:nth-last-child(n + 2) > .ru-line,
+ru-timeline-item:nth-last-child(n + 2) > .ru-line {
   position: absolute;
   width: 1px;
   background-color: rgb(189, 189, 189);
@@ -64,13 +77,15 @@
   z-index: -1;
 }
 
-.ru-timeline-item .ru-label {
+.ru-timeline-item .ru-label,
+ru-timeline-item .ru-label {
   color: rgb(124, 124, 124);
   font-size: 12px;
   line-height: var(--lw);
 }
 
-.ru-timeline-item .ru-content {
+.ru-timeline-item .ru-content,
+ru-timeline-item .ru-content {
   color: #333;
   padding: calc(var(--ll) / 2) 0 calc(var(--ll));
   font-size: 14px;

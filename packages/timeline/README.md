@@ -34,6 +34,14 @@
 
 <body>
     <div id="wrapper"></div>
+    <ru-timeline>
+        <ru-timeline-item
+            img="https://pics2.baidu.com/feed/bd315c6034a85edf81702f204ba7a225dc54752a.jpeg?token=40ea367f6b2ef995eaa6f5faf705a7d4"
+            label="2019-01-03" content='图片图标'></ru-timeline-item>
+        <ru-timeline-item label="2019-01-02" content='默认图标'></ru-timeline-item>
+        <ru-timeline-item icon='iconfont icon-settings' label="2019-01-01" content='iconfont图标库'></ru-timeline-item>
+    </ru-timeline>
+
     <script>
         new TimeLine({
             wrapper: '#wrapper',
