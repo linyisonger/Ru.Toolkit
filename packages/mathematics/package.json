@@ -6,7 +6,7 @@
   "scripts": {
     "init": "npm i",
     "test": "node test/index.js",
-    "build": "npx webpack"
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,6 @@
   },
   "gitHead": "ad3420a661b48ad972554bd298c51ce06a6e1dff",
   "devDependencies": {
-    "ts-loader": "^9.2.3",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2"
+    "ts-loader": "^9.2.3"
   }
 }
