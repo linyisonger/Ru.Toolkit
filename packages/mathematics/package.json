@@ -1,12 +1,10 @@
 {
-  "name": "ru-toolkit-datepicker",
-  "version": "1.0.2",
-  "description": "",
+  "name": "ru-toolkit-mathematics",
+  "version": "1.0.0",
+  "description": "这是一个很'常用'的数学库",
   "main": "index.js",
   "scripts": {
-    "init": "npm i",
-    "test": "echo \"Error: no test specified\"",
-    "build": "npx webpack"
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,15 +13,13 @@
   "keywords": [
     "typescript"
   ],
-  "author": "林一怂儿",
-  "license": "MIT",
+  "author": "linyisonger",
+  "license": "ISC",
   "dependencies": {
     "typescript": "^4.3.2"
   },
   "gitHead": "ad3420a661b48ad972554bd298c51ce06a6e1dff",
   "devDependencies": {
-    "css-loader": "^5.2.6",
-    "mini-css-extract-plugin": "^1.6.0",
     "ts-loader": "^9.2.3",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2"

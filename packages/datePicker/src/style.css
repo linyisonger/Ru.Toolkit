@@ -1,0 +1,37 @@
+ru-date-picker {
+  display: inline-block;
+  height: 40px;
+  width: 120px;
+  background-color: #10f9f1;
+  position: relative;
+}
+ru-date-picker input {
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  outline: inherit;
+  font-size: inherit;
+  background-color: inherit;
+}
+ru-date-picker .ru-window {
+  --w: 320px;
+  --h: 280px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /* background-color: #f01; */
+}
+
+ru-date-picker .ru-year-window {
+  display: flex;
+  width: var(--w);
+  height: var(--h);
+  flex-wrap: wrap;
+}
+
+ru-date-picker .ru-year {
+  width: calc(var(--w) / 4);
+  height: calc(var(--h) / 4);
+  background-color: #ddd;
+  
+}

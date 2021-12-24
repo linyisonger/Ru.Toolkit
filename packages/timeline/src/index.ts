@@ -1,4 +1,4 @@
-import './index.css';
+import './style.css';
 
 class TimeLineVto {
     wrapper: string = '';
@@ -60,11 +60,13 @@ class TimeLine extends TimeLineVto {
     }
 }
 class HtmlTimeLine extends HTMLElement {
+    
+
     constructor() {
         super();
     }
     after() {
-
+        
     }
 }
 class HtmlTimeLineItem extends HTMLElement {
