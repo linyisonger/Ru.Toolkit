@@ -27,4 +27,4 @@ export class Mathematics {
             return Math.abs(a.a - a.b) - Math.abs(b.a - b.b);
         })
     }
-} 
+}   
