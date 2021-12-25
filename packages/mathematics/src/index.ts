@@ -27,4 +27,30 @@ export class Mathematics {
             return Math.abs(a.a - a.b) - Math.abs(b.a - b.b);
         })
     }
+
+    /**
+     * 获取随机数(整数)
+     * @param min 最小值
+     * @param max 最大值
+     * @returns 随机数 [min,max)
+     */
+    static getRandomInt(min: number, max: number) {
+        return Math.floor(Math.random() * max) - min;
+    }
+
+    /**
+     * 打乱数组
+     * @param array 数组
+     * @returns 打乱后的数组 
+     */
+    static getDisorganizeArray<T>(array: T[]): T[] {
+        let tempArray = [...array];
+        for (let i = 0; i < array.length; i++) {
+            let j = this.getRandomInt(0, array.length);
+            let temp = tempArray[i];
+            tempArray[i] = tempArray[j];
+            tempArray[j] = temp;
+        }
+        return tempArray;
+    }
 }   
