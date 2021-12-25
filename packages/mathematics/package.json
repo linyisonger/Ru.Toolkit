@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "这是一个很'常用'的数学库",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "init": "npm i",
     "test": "node test/index.js",

@@ -1,4 +1,4 @@
-let { Mathematics } = require('../dist/index.js');
+import { Mathematics } from '../dist/index.js';
 console.log("test start...");
 console.log("getFactors start...");
 console.log('input x = 2');
