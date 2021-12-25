@@ -6,6 +6,6 @@
 
 * ```getFactors(x)```  获取因数  因数取值区间 [1~x/2]
 * ```getFactorsByApproach(x)```  获取因数并按照接近程度返回  
-* ```getRandomInt(x)```  获取随机数(整数)  
+* ```getRandomInt(min,max)```  获取随机数(整数) [min,max) 
 * ```getDisorganizeArray(array)```  打乱数组  
 
