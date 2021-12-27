@@ -4,8 +4,8 @@
 
 ### Mathematics
 
-* ```getFactors(x)```  获取因数  因数取值区间 [1~x/2]
-* ```getFactorsByApproach(x)```  获取因数并按照接近程度返回  
-* ```getRandomInt(min,max)```  获取随机数(整数) [min,max) 
-* ```getDisorganizeArray(array)```  打乱数组  
-
+- `getFactors(x: number): { a: number; b: number; }[]` 获取整数的所有因数 [1~x/2]
+- `getFactorsByApproach(x: number): { a: number; b: number; }[]` 获取整数的所有因数通过接近程度排序
+- `getRandomInt(min: number, max: number): number` 获取随机数(整数) [min,max)
+- `getDisorganizeArray<T>(array: T[]): T[]` 打乱数组
+- `sum(array: number[]): number` 求和

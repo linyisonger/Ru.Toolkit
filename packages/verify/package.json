@@ -1,0 +1,29 @@
+{
+  "name": "ru-toolkit-verify",
+  "version": "1.0.0",
+  "description": "这是一个很'常用'的验证库",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "init": "npm i",
+    "test": "node test/index.js",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linyisonger/Ru.Toolkit.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "linyisonger",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.3.2"
+  },
+  "gitHead": "ad3420a661b48ad972554bd298c51ce06a6e1dff",
+  "devDependencies": {
+    "ts-loader": "^9.2.3"
+  }
+}

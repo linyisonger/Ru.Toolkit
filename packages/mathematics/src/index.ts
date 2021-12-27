@@ -34,7 +34,7 @@ export class Mathematics {
      * @param max 最大值
      * @returns 随机数 [min,max)
      */
-    static getRandomInt(min: number, max: number) {
+    static getRandomInt(min: number, max: number): number {
         return Math.floor(Math.random() * max) - min;
     }
 
@@ -52,5 +52,15 @@ export class Mathematics {
             tempArray[j] = temp;
         }
         return tempArray;
+    }
+
+    /**
+     * 求和
+     * @param array 数组
+     */
+    static sum(array: number[]): number {
+        let sum = 0;
+        for (let item of array) sum += item;
+        return sum;
     }
 }   
