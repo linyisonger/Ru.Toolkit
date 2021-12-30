@@ -1,7 +1,7 @@
 {
   "name": "ru-toolkit-convertor",
   "version": "1.0.0",
-  "description": "这是一个很'格式'的数学库",
+  "description": "这是一个'常用'的格式库",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "type": "module",
