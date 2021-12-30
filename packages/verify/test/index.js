@@ -31,12 +31,6 @@ if (Verify.isUnifiedSocialCreditIdentifier('92520400WMMXENXA4U'))
 else throw new Error("cao !!!!")
 console.log("isUnifiedSocialCreditIdentifier end");
 
-console.log("usciToOibc start...");
-if (Verify.usciToOibc('91533400K312QNFQ3L') == 'K312QNFQ-3')
-    console.log('yes ~');
-else throw new Error("cao !!!!")
-console.log("usciToOibc end");
-
 console.log("isVehicleNumber start...");
 if (Verify.isVehicleNumber('云F00009'))
     console.log('yes ~');

@@ -50,7 +50,7 @@ export class Verify {
         /** 行政区域代码 第三位和第八位 */
         let regionCode = usci.substring(2, 8);
         /** 组织机构代码 */
-        let organizingInstitutionBarCode = this.usciToOibc(usci);
+        let organizingInstitutionBarCode = usci.substring(8, 16) + '-' + usci.substring(16, 17)
 
 
         /** 组织机构校验不合格 */
@@ -122,15 +122,6 @@ export class Verify {
         // 校验社会统一信用代码
         if (usciAfter != c18) return false;
         return true;
-    }
-    /**
-     * 社会统一信用代码转换组织机构代码
-     * @param usci 社会统一信用代码
-     * @returns 组织机构代码
-     */
-    static usciToOibc(usci: string): string {
-        if (usci.length != 18) return "" // 长度不正确
-        return usci.substring(8, 16) + '-' + usci.substring(16, 17);
     }
     /**
      * 是否是车牌号

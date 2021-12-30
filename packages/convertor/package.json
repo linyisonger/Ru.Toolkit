@@ -1,7 +1,7 @@
 {
-  "name": "ru-toolkit-verify",
-  "version": "1.0.1",
-  "description": "这是一个很'常用'的验证库",
+  "name": "ru-toolkit-convertor",
+  "version": "1.0.0",
+  "description": "这是一个很'格式'的数学库",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "type": "module",
