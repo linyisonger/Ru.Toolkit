@@ -19,6 +19,13 @@ if (Verify.isPhoneNumber('18717151126'))
 else throw new Error("cao !!!!")
 console.log("isPhoneNumber end");
 
+console.log("isTellPhoneNumber start...");
+if (Verify.isTellPhoneNumber('0773-4567891'))
+    console.log('yes ~');
+else throw new Error("cao !!!!")
+console.log("isTellPhoneNumber end");
+
+
 console.log("isEmail start...");
 if (Verify.isEmail('linyisonger@qq.com'))
     console.log('yes ~');

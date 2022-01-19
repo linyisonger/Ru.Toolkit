@@ -27,6 +27,14 @@ export class Verify {
         return /^1[3456789]\d{9}$/.test(phoneNumber)
     }
     /**
+     * 校验是否是固定电话
+     * @param tellPhoneNumber 固定电话
+     * @returns 
+     */
+    static isTellPhoneNumber(tellPhoneNumber: string): boolean {
+        return /^\d{3}-\d{7,8}|\d{4}-\d{7,8}$/.test(tellPhoneNumber)
+    }
+    /**
      * 是否是邮箱
      * @param email 邮箱
      * @returns 
@@ -162,4 +170,6 @@ export class Verify {
         if (Number(num[17]) != vc[sum]) return false;
         return true;
     }
+
+
 }
