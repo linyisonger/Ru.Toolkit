@@ -7,6 +7,7 @@
 - `likeUsci(usci: string): boolean` 像是社会统一信用代码
 - `isNullOrEmpty(str: string): boolean` 是否是 null 或者""
 - `isPhoneNumber(phoneNumber: string): boolean` 校验是否是 11 位手机号码
+- `isTellPhoneNumber(tellPhoneNumber: string): boolean` 校验是否是固定电话
 - `isEmail(email: string): boolean` 是否是邮箱
 - `isUnifiedSocialCreditIdentifier(usci: string): boolean` 是否是统一社会信用代码 
 - `isVehicleNumber(vehicleNumber: string): boolean` 是否是车牌号
