@@ -171,5 +171,34 @@ export class Verify {
         return true;
     }
 
+    /**
+     * 密码规则校验
+     * @param password 密码 
+     * @param rule 规则
+     * @param minLength 最小长度 
+     * @param maxLength 最大长度
+     * @returns 
+     */
+    static passwordRules(password: string, rule: PasswordRuleEnum = PasswordRuleEnum.LargeSmallNumber, minLength = 6, maxLength = 20) {
+        let res = true;
+        if ((rule & PasswordRuleEnum.Large) != 0)
+            res = res && /(?=.*[A-Z])/.test(password)
+        if ((rule & PasswordRuleEnum.Small) != 0)
+            res = res && /(?=.*[a-z])/.test(password)
+        if ((rule & PasswordRuleEnum.Number) != 0)
+            res = res && /(?=.*[0-9])/.test(password)
+        return res && password.length >= minLength && password.length <= maxLength
+    }
 
+
+}
+
+export enum PasswordRuleEnum {
+    Large = 1,
+    Small = 2,
+    LargeSmall = 3,
+    Number = 4,
+    LargeNumber = 5,
+    SmallNumber = 6,
+    LargeSmallNumber = 7
 }

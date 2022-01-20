@@ -1,6 +1,6 @@
 {
   "name": "ru-toolkit-verify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "这是一个很'常用'的验证库",
   "main": "index.js",
   "types": "dist/index.d.ts",

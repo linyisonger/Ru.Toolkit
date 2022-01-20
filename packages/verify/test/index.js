@@ -1,4 +1,4 @@
-import { Verify } from '../dist/index.js';
+import { PasswordRuleEnum, Verify } from '../dist/index.js';
 console.log("test start...");
 
 console.log("likeUsci start...");
@@ -65,3 +65,8 @@ console.log("isCitizenIdentificationNumber end");
 console.log("test end");
 
 
+console.log("passwordRules start...");
+if (Verify.passwordRules('123456Aa', PasswordRuleEnum.LargeSmallNumber, 8))
+    console.log('yes ~');
+else throw new Error("cao !!!!")
+console.log("passwordRules end");

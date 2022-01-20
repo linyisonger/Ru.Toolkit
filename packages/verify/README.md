@@ -13,3 +13,4 @@
 - `isVehicleNumber(vehicleNumber: string): boolean` 是否是车牌号
 - `likeIDCardNumber(num: string): boolean` 像身份证号
 - `isCitizenIdentificationNumber(num: string): boolean` 是否是身份证号码
+- `passwordRules(password: string, rule: PasswordRuleEnum = PasswordRuleEnum.LargeSmallNumber, minLength = 6, maxLength = 20)` 密码规则校验
