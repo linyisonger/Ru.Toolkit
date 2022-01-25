@@ -1,6 +1,6 @@
 {
   "name": "ru-toolkit-convertor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "这是一个'常用'的格式库",
   "main": "index.js",
   "types": "dist/index.d.ts",

@@ -11,3 +11,4 @@
 - `base64ToText(base64: string): string` base64 转文本
 - `jsonToBase64<T>(json: T): string` json 对象转换 base64
 - `base64ToJson<T>(base64: string): T` base64 转换 json 对象
+- `hexToRgb(hexColor: string): string` 16进制颜色转换rgb颜色

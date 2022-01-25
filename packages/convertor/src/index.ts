@@ -185,4 +185,45 @@ export class Convertor {
     static base64ToJson<T>(base64: string): T {
         return JSON.parse(this.base64ToText(base64))
     }
+    /**
+     * 颜色转换
+     * #fff or #ffffff => rgb(255,255,255)
+     *  fff or  ffffff => rgb(255,255,255)
+     * @param hexColor 16进制颜色
+     * @returns rgb颜色
+     */
+    static hexToRgb(hexColor: string): string {
+        // 16进制代码
+        let hexCode = "0123456789ABCDEF";
+        if (/^#[0-9a-fA-F]{6}$/.test(hexColor)) {
+            let tmpHex = hexColor.substring(1).toUpperCase();
+            let r = hexCode.indexOf(tmpHex[0]) * 16 + hexCode.indexOf(tmpHex[1])
+            let g = hexCode.indexOf(tmpHex[2]) * 16 + hexCode.indexOf(tmpHex[3])
+            let b = hexCode.indexOf(tmpHex[4]) * 16 + hexCode.indexOf(tmpHex[5])
+            return `rgb(${r},${g},${b})`
+        }
+        else if (/^#[0-9a-fA-F]{3}$/.test(hexColor)) {
+            let tmpHex = hexColor.substring(1).toUpperCase();
+            let r = hexCode.indexOf(tmpHex[0]) * 16 + hexCode.indexOf(tmpHex[0])
+            let g = hexCode.indexOf(tmpHex[1]) * 16 + hexCode.indexOf(tmpHex[1])
+            let b = hexCode.indexOf(tmpHex[2]) * 16 + hexCode.indexOf(tmpHex[2])
+            return `rgb(${r},${g},${b})`
+        }
+        else if (/^[0-9a-fA-F]{6}$/.test(hexColor)) {
+            let tmpHex = hexColor.substring(0).toUpperCase();
+            let r = hexCode.indexOf(tmpHex[0]) * 16 + hexCode.indexOf(tmpHex[1])
+            let g = hexCode.indexOf(tmpHex[2]) * 16 + hexCode.indexOf(tmpHex[3])
+            let b = hexCode.indexOf(tmpHex[4]) * 16 + hexCode.indexOf(tmpHex[5])
+            return `rgb(${r},${g},${b})`
+        }
+        else if (/^[0-9a-fA-F]{3}$/.test(hexColor)) {
+            let tmpHex = hexColor.substring(0).toUpperCase();
+            let r = hexCode.indexOf(tmpHex[0]) * 16 + hexCode.indexOf(tmpHex[0])
+            let g = hexCode.indexOf(tmpHex[1]) * 16 + hexCode.indexOf(tmpHex[1])
+            let b = hexCode.indexOf(tmpHex[2]) * 16 + hexCode.indexOf(tmpHex[2])
+            return `rgb(${r},${g},${b})`
+        }
+        else throw new TypeError("input data type error.")
+    }
+
 }   

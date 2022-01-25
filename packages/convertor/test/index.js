@@ -34,6 +34,13 @@ if (JSON.stringify(Convertor.base64ToJson(Convertor.jsonToBase64({ a: 1 }))) == 
 else throw new Error("cao !!!!")
 console.log("base64ToJson and jsonToBase64 end");
 
+
+console.log("hexToRgb start...");
+if (Convertor.hexToRgb("#fff") == 'rgb(255,255,255)')
+    console.log('yes ~');
+else throw new Error("cao !!!!")
+console.log("hexToRgb end");
+
 console.log("test end");
 
 
