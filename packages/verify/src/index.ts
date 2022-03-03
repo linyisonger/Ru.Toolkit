@@ -190,6 +190,21 @@ export class Verify {
         return res && password.length >= minLength && password.length <= maxLength
     }
 
+    /**
+     * 判断是不是在微信浏览器中
+     * @param userAgent 方便编写测试文件
+     */
+    static inMicroMessenger(userAgent?: string) {
+        return (userAgent ?? navigator?.userAgent)?.toLocaleLowerCase()?.indexOf('micromessenger') > -1
+    }
+
+    /**
+     * 判断是不是在微信小程序中web-view中
+     * @param userAgent 方便编写测试文件
+     */
+    static inMiniprogramWebView(userAgent?: string) {
+        return (userAgent ?? navigator?.userAgent)?.toLocaleLowerCase()?.indexOf('miniprogram') > -1 && this.inMicroMessenger(userAgent)
+    }
 
 }
 
