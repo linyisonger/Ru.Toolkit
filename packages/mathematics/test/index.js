@@ -1,4 +1,4 @@
-import { Mathematics } from '../dist/index.js';
+import { GetRandomStrEnum, Mathematics } from '../dist/index.js';
 console.log("test start...");
 console.log("getFactors start...");
 console.log('input x = 2');
@@ -33,6 +33,4 @@ if (Mathematics.getDisorganizeArray(['a', 'b', 'c', 'd'])) {
 else throw new Error("cao !!!!")
 console.log("getDisorganizeArray end");
 
-console.log("test end");
-
-
+console.log("test end"); 

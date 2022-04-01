@@ -9,3 +9,5 @@
 - `getRandomInt(min: number, max: number): number` 获取随机数(整数) [min,max)
 - `getDisorganizeArray<T>(array: T[]): T[]` 打乱数组
 - `sum(array: number[]): number` 求和
+- `getRandomStr(len: number, str: GetRandomStrEnum | string = GetRandomStrEnum.LargeSmallNumber, ignore = ''):string` 获取随机字符串
+- `uuid(): string` 全局唯一标识符

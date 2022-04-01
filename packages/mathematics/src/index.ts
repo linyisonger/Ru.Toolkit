@@ -63,4 +63,44 @@ export class Mathematics {
         for (let item of array) sum += item;
         return sum;
     }
-}   
+
+    /**
+     * 获取随机字符串
+     * @param len 长度
+     * @param str 字符串或者枚举
+     * @param ignore 忽略
+     */
+    static getRandomStr(len: number, str: GetRandomStrEnum | string = GetRandomStrEnum.LargeSmallNumber, ignore = '') {
+        let tmpStr = "";
+        let resStr = "";
+        if (typeof (str) == "string") tmpStr = str;
+        else {
+            if ((str & GetRandomStrEnum.Large) != 0) tmpStr += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            if ((str & GetRandomStrEnum.Small) != 0) tmpStr += "abcdefghijklmnopqrstuvwxyz"
+            if ((str & GetRandomStrEnum.Number) != 0) tmpStr += "0123456789"
+        }
+        // 剔除忽略字符串
+        tmpStr.replace(ignore, "");
+        for (let i = 0; i < len; i++)  resStr += tmpStr[this.getRandomInt(0, tmpStr.length)]
+        return resStr;
+    }
+    /**
+     * 全局唯一标识符
+     */
+    static uuid() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+}
+
+export enum GetRandomStrEnum {
+    Large = 1,
+    Small = 2,
+    LargeSmall = 3,
+    Number = 4,
+    LargeNumber = 5,
+    SmallNumber = 6,
+    LargeSmallNumber = 7
+}
