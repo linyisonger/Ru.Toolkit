@@ -27,7 +27,6 @@ export class Mathematics {
             return Math.abs(a.a - a.b) - Math.abs(b.a - b.b);
         })
     }
-
     /**
      * 获取随机数(整数)
      * @param min 最小值
@@ -37,7 +36,6 @@ export class Mathematics {
     static getRandomInt(min: number, max: number): number {
         return Math.floor(Math.random() * max) - min;
     }
-
     /**
      * 打乱数组
      * @param array 数组
@@ -53,7 +51,6 @@ export class Mathematics {
         }
         return tempArray;
     }
-
     /**
      * 求和
      * @param array 数组
@@ -63,7 +60,6 @@ export class Mathematics {
         for (let item of array) sum += item;
         return sum;
     }
-
     /**
      * 获取随机字符串
      * @param len 长度
@@ -93,7 +89,94 @@ export class Mathematics {
             return v.toString(16);
         });
     }
+    /**
+     * 判断a与b符号是否相同
+     * @param a 
+     * @param b 
+     * @returns 
+     */
+    static sameSign(a: number, b: number): boolean {
+        return (a ^ b) >= 0;
+    }
 }
+
+/**
+ * 二维向量
+ */
+export class Vector2 {
+    x: number
+    y: number
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
+    /**
+     * 创建
+     * @param x 
+     * @param y 
+     */
+    static c(x: number, y: number) {
+        return new Vector2(x, y);
+    }
+
+    /**
+     * 减法 p1 - p2
+     * @param p1 点1
+     * @param p2 点2
+     * @returns 向量
+     */
+    static subtraction(p1: Vector2, p2: Vector2) {
+        return Vector2.c(p1.x - p2.x, p1.y - p2.y);
+    }
+    /**
+     * 叉乘
+     * @param v1 向量1
+     * @param v2 向量2
+     * @returns 
+     */
+    static multiplicationCross(v1: Vector2, v2: Vector2) {
+        return v1.x * v2.y - v1.y * v2.x;
+    }
+    /**
+     * 检测两线段是否交叉
+     * @param p1 点1
+     * @param p2 点2
+     * @param p3 点3
+     * @param p4 点4
+     */
+    static checkCross(p1: Vector2, p2: Vector2, p3: Vector2, p4: Vector2) {
+        let p3p1 = Vector2.subtraction(p1, p3);
+        let p3p2 = Vector2.subtraction(p2, p3);
+        let p3p4 = Vector2.subtraction(p4, p3);
+
+        let p1p2 = Vector2.subtraction(p2, p1);
+        let p1p3 = Vector2.subtraction(p3, p1);
+        let p1p4 = Vector2.subtraction(p4, p1);
+
+        return Vector2.multiplicationCross(p3p1, p3p4) * Vector2.multiplicationCross(p3p2, p3p4) <= 0 &&
+            Vector2.multiplicationCross(p1p2, p1p3) * Vector2.multiplicationCross(p1p2, p1p4) <= 0
+    }
+
+    /**
+     * 检测p点是否在点p1,p2,p3组成的三角形内
+     * @param p 
+     * @param p1 
+     * @param p2 
+     * @param p3 
+     */
+    static checkInTriangle(p: Vector2, p1: Vector2, p2: Vector2, p3: Vector2) {
+        let pp1 = Vector2.subtraction(p1, p);
+        let pp2 = Vector2.subtraction(p2, p);
+        let pp3 = Vector2.subtraction(p3, p);
+
+        let d1 = Vector2.multiplicationCross(pp1, pp2);
+        let d2 = Vector2.multiplicationCross(pp2, pp3);
+        let d3 = Vector2.multiplicationCross(pp3, pp1);
+
+        return Mathematics.sameSign(d1, d2) && Mathematics.sameSign(d2, d3);
+    }
+}
+
 
 export enum GetRandomStrEnum {
     Large = 1,
