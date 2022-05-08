@@ -61,4 +61,19 @@ if (Vector2.multiplicationCross(Vector2.c(1, 0), Vector2.c(1, 0)) == 0) {
 else throw new Error("cao !!!!")
 console.log("Vector2.multiplicationCross end");
 
-console.log("test end"); 
+console.log("Vector2.checkInRectangle start...");
+if (Vector2.checkInRectangle(Vector2.c(-1.9, 0), Vector2.c(0, 2), Vector2.c(2, 0), Vector2.c(0, -2), Vector2.c(-2, 0))) {
+    console.log('yes ~');
+}
+else throw new Error("cao !!!!")
+console.log("Vector2.checkInRectangle end");
+
+console.log("Vector2.rotateAroundPoint start...");
+if (Vector2.rotateAroundPoint(Vector2.c(1, 1), Vector2.c(0, 0), 90).y == -1) {
+    console.log('yes ~');
+}
+else throw new Error("cao !!!!")
+console.log("Vector2.rotateAroundPoint end");
+
+console.log("test end");
+ 

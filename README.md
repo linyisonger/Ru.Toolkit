@@ -23,11 +23,14 @@
  
  ### Vector2
  
- - `new Vector2(x: number, y: number)` | `c(x: number, y: number):Vector2` 新建二维向量
- - `subtraction(p1: Vector2, p2: Vector2)` 向量之间的减法 p1 - p2
- - `multiplicationCross(v1: Vector2, v2: Vector2)` 叉乘
- - `checkCross(p1: Vector2, p2: Vector2, p3: Vector2, p4: Vector2)` 检测两线段是否交叉
- - `checkInTriangle(p: Vector2, p1: Vector2, p2: Vector2, p3: Vector2)` 检测p点是否在点p1,p2,p3组成的三角形内
+- `new Vector2(x: number, y: number)` | `c(x: number, y: number):Vector2` 新建二维向量
+- `subtraction(p1: Vector2, p2: Vector2)` 向量之间的减法 p1 - p2
+- `dotProduct(v1: Vector2, v2: Vector2)` 点乘
+- `multiplicationCross(v1: Vector2, v2: Vector2)` 叉乘
+- `checkCross(p1: Vector2, p2: Vector2, p3: Vector2, p4: Vector2)` 检测两线段是否交叉
+- `checkInTriangle(p: Vector2, p1: Vector2, p2: Vector2, p3: Vector2)` 检测 p 点是否在点 p1,p2,p3 组成的三角形内
+- `checkInRectangle(p: Vector2, p1: Vector2, p2: Vector2, p3: Vector2, p4?: Vector2)` 检测 p 点是否在点 p1,p2,p3,p4 组成的矩形内
+- `rotateAroundPoint(p: Vector2, o: Vector2, angle: number)` p 点绕 o 点旋转 angle°
 
  ## ru-toolkit-convertor 常用格式库
 
