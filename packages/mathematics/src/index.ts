@@ -219,6 +219,15 @@ export class Vector2 {
         let y = tp.y * cos - tp.x * sin;
         return Vector2.c(x, y)
     }
+
+    /**
+     * 计算p1到p2两点之间的距离 保留3位小数
+     * @param p1 
+     * @param p2 
+     */
+    static distance(p1: Vector2, p2: Vector2) {
+        return +Math.sqrt(Math.pow(p2.y - p1.y, 2) + Math.pow(p2.x - p1.x, 2)).toFixed(3)
+    }
 }
 
 

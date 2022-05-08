@@ -31,6 +31,7 @@
 - `checkInTriangle(p: Vector2, p1: Vector2, p2: Vector2, p3: Vector2)` 检测 p 点是否在点 p1,p2,p3 组成的三角形内
 - `checkInRectangle(p: Vector2, p1: Vector2, p2: Vector2, p3: Vector2, p4?: Vector2)` 检测 p 点是否在点 p1,p2,p3,p4 组成的矩形内
 - `rotateAroundPoint(p: Vector2, o: Vector2, angle: number)` p 点绕 o 点旋转 angle°
+- `distance(p1: Vector2, p2: Vector2): number;` 计算 p1 到 p2 两点之间的距离 保留 3 位小数
 
  ## ru-toolkit-convertor 常用格式库
 

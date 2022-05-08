@@ -75,5 +75,11 @@ if (Vector2.rotateAroundPoint(Vector2.c(1, 1), Vector2.c(0, 0), 90).y == -1) {
 else throw new Error("cao !!!!")
 console.log("Vector2.rotateAroundPoint end");
 
+console.log("Vector2.distance start...");
+if (Vector2.distance(Vector2.c(3, 4), Vector2.c(0, 0)) == 5) {
+    console.log('yes ~');
+}
+else throw new Error("cao !!!!")
+console.log("Vector2.distance end");
+
 console.log("test end");
- 
