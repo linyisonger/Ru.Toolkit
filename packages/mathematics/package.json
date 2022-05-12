@@ -1,6 +1,6 @@
 {
   "name": "ru-toolkit-mathematics",
-  "version": "1.0.9",
+  "version": "1.0.9a1",
   "description": "这是一个很'常用'的数学库",
   "main": "index.js",
   "types": "dist/index.d.ts",
@@ -19,11 +19,10 @@
   ],
   "author": "linyisonger",
   "license": "ISC",
-  "dependencies": {
-    "typescript": "^4.3.2"
-  },
+  "dependencies": {},
   "gitHead": "ad3420a661b48ad972554bd298c51ce06a6e1dff",
   "devDependencies": {
+    "typescript": "^4.3.2",
     "ts-loader": "^9.2.3"
   }
 }
