@@ -1,2 +1,5 @@
 # 排除src文件
 src/
+test/
+
+tsconfig.json

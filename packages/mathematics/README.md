@@ -15,7 +15,11 @@
 
 ### Vector2
 
+
+- `plus(p1: Vector2)` 加法 自身 + p1
+- `subtraction(p1: Vector2)` 减法 自身 - p1
 - `new Vector2(x: number, y: number)` | `c(x: number, y: number):Vector2` 新建二维向量
+- `plus(p1: Vector2, p2: Vector2)` 加法 p1 + p2 
 - `subtraction(p1: Vector2, p2: Vector2)` 向量之间的减法 p1 - p2
 - `dotProduct(v1: Vector2, v2: Vector2)` 点乘
 - `multiplicationCross(v1: Vector2, v2: Vector2)` 叉乘

@@ -82,4 +82,25 @@ if (Vector2.distance(Vector2.c(3, 4), Vector2.c(0, 0)) == 5) {
 else throw new Error("cao !!!!")
 console.log("Vector2.distance end");
 
+console.log("Vector2.plus start...");
+if (Vector2.plus(Vector2.c(0, 0), Vector2.c(1, 1)).x == 1) {
+    console.log('yes ~');
+}
+else throw new Error("cao !!!!")
+console.log("Vector2.plus end");
+
+console.log("Vector2.plus start..."); 
+if (Vector2.c(0,0).plus(Vector2.c(1,1)).x == 1) {
+    console.log('yes ~');
+}
+else throw new Error("cao !!!!")
+console.log("Vector2.plus end");
+
+console.log("Vector2.subtraction start..."); 
+if (Vector2.c(0,0).subtraction(Vector2.c(1,1)).x == -1) {
+    console.log('yes ~');
+}
+else throw new Error("cao !!!!")
+console.log("Vector2.subtraction end");
+
 console.log("test end");

@@ -110,6 +110,31 @@ export class Vector2 {
         this.x = x;
         this.y = y;
     }
+
+    /**
+     * 加法 自身+p1
+     * @version v1.1.0
+     * @param p1 
+     */
+    plus(p1: Vector2) {
+        this.x += p1.x;
+        this.y += p1.y;
+        return this;
+    }
+
+    /**
+     * 减法 自身-p1
+     * @version v1.1.0 
+     * @param p1 
+     */
+    subtraction(p1: Vector2) {
+        this.x -= p1.x;
+        this.y -= p1.y;
+        return this;
+    }
+
+
+
     /**
      * 创建
      * @param x 
@@ -128,6 +153,19 @@ export class Vector2 {
     static subtraction(p1: Vector2, p2: Vector2) {
         return Vector2.c(p1.x - p2.x, p1.y - p2.y);
     }
+
+    /**
+     * 加法 p1 + p2 
+     * @param p1 点1
+     * @param p2 点2
+     * @returns 向量
+     * @version v1.1.0  
+     */
+    static plus(p1: Vector2, p2: Vector2) {
+        return Vector2.c(p1.x + p2.x, p1.y + p2.y);
+    }
+
+
     /**
      * 叉乘
      * @param v1 向量1
@@ -228,6 +266,8 @@ export class Vector2 {
     static distance(p1: Vector2, p2: Vector2) {
         return +Math.sqrt(Math.pow(p2.y - p1.y, 2) + Math.pow(p2.x - p1.x, 2)).toFixed(3)
     }
+
+
 }
 
 
